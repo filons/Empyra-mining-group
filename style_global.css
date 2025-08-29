@@ -1,0 +1,244 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+footer {
+  margin-top: auto;
+}
+/* Import des polices depuis Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  margin: 20px 0;
+}
+/* Header */
+nav.navbar {
+  display: flex;
+  align-items: center;
+}
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.burger span {
+  height: 3px;
+  width: 25px;
+  background: #c9a13a;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 20px;
+}
+.nav-links.nav-active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100vw;
+  background: #5a5a5a;
+  z-index: 999;
+  padding: 30px 0;
+  gap: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.burger.toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.toggle span:nth-child(2) {
+  opacity: 0;
+}
+.burger.toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+@media (max-width: 900px) {
+  nav.navbar {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .nav-links {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5a5a5a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.active {
+  color: #c9a13a;
+}
+.item-menu a {
+  text-decoration: none;
+  font-family: "Cinzel", serif;
+  color: #ffffff;
+}
+
+.item-menu a:hover {
+  color: #c9a13a;
+}
+
+.item-menu a.active,
+.item-menu a:active {
+  color: #c9a13a !important;
+}
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+.logo img {
+  max-width: 100%;
+  height: 100px;
+}
+.logo {
+  flex-shrink: 1;
+  background-color: white;
+  width: 200px;
+  border-bottom-right-radius: 90%;
+}
+/* Footer */
+footer {
+  background-color: #5a5a5a;
+  padding: 40px 20px 10px 20px;
+  color: #fff;
+  font-size: 16px;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-item {
+  flex: 1 1 250px;
+  min-width: 220px;
+  padding: 10px 20px;
+  color: #fff;
+}
+.footer-item img {
+  display: block;
+  margin-bottom: 15px;
+}
+.footer-item h6 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #c9a13a;
+  letter-spacing: 1px;
+}
+.social-content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s;
+}
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+.footer-item-logo {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  clip-path: ellipse(50% 50% at 50% 50%);
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: #c9a13a;
+}
+.footer-links i {
+  display: flex;
+  align-items: center;
+}
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+.contact-item i {
+  display: flex;
+  align-items: center;
+  color: #c9a13a;
+}
+@media (max-width: 900px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+  .footer-item {
+    min-width: unset;
+    padding: 10px 0;
+  }
+}
