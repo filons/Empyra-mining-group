@@ -2,6 +2,13 @@ html,
 body {
   height: 100%;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   min-height: 100vh;
   display: flex;
@@ -10,17 +17,13 @@ body {
 main {
   flex: 1;
 }
+
 footer {
   margin-top: auto;
 }
+
 /* Import des polices depuis Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Poppins:wght@400;500;600&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -95,6 +98,7 @@ nav.navbar {
     display: flex;
   }
 }
+
 header {
   display: flex;
   justify-content: space-between;
