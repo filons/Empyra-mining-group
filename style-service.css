@@ -1,10 +1,5 @@
 /* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Arial", sans-serif;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Poppins:wght@400;500;600&display=swap');
   
   /* Container */
   .container {
