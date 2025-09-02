@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMPYRA MINING GROUP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
     <link rel="stylesheet" href="style_global.css">
     <link rel="stylesheet" href="acceuil.css">
     <script src="script.js" defer></script>
+    
 </head>
 <body>
     <header>
@@ -35,7 +38,7 @@
             <h1>empyra mining group</h1>
             <p>transformons les ressources naturels en richesses durables</p>
             <div class="btn-1">
-                <div class="contact"><a href="#"><p>contacter nous</p></a></div>
+                <div class="contact"><a href="#">contacter nous</a></div>
                 <div class="icon">
                     <i><svg xmlns="http://www.w3.org/2000/svg" 
                         width="30" height="30" 
@@ -48,9 +51,141 @@
             </div>
        </div>
     </section>
-    <section></section>
-    <section></section>
-    <section></section>
+    <section>
+        <div class="presentation">
+            <h1>presentation</h1>
+            <div class="presentation-content">
+                <div class="img-presentation">
+                    <img src="images/presentation.jpg" alt="Image de présentation">
+                </div>
+                <div class="text-presentation">
+                    <p>Empyra Mining Group est une société spécialisée dans l’extraction minière, 
+    engagée à fournir des ressources de qualité tout en respectant les normes
+    internationales de sécurité et de durabilité.Notre mission est de 
+    valoriser le potentiel minier à travers des solutions innovantes et 
+    responsables, contribuant ainsi au développement économique 
+    et social des communautés locales.Grâce à une expertise technique 
+    éprouvée et une équipe pluridisciplinaire, nous nous positionnons 
+    comme un acteur de référence dans le secteur, en alliant performance, 
+    transparence et respect de l’environnement.
+    Chez Empyra Mining Group, nous croyons qu’une exploitation
+    minière moderne doit être à la fois rentable et durable, 
+    afin de bâtir un avenir prospère pour toutes les parties prenantes.</p>
+                    <div class="btn-savoir-plus">
+                        <a href="#">Savoir plus</a>
+                        <div class="icon-savoir-plus">
+                            <i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+  <path d="M5 12h14M12 5l7 7-7 7"/>
+</svg>
+
+                            </i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services-section">
+        <h1 class="section-title">Nos Services</h1>
+        <div class="services swiper">
+            <div class="services-content swiper-wrapper">
+                <div class="services-item swiper-slide">
+                    <h2>Exploration & Prospection</h2>
+                    <p>Services complets pour identifier les gisements potentiels et évaluer leur viabilité économique et géologique.</p>
+                </div>
+                <div class="services-item swiper-slide">
+                    <h2>Extraction & Traitement</h2>
+                    <p>Techniques d'extraction modernes et traitement des minerais pour maximiser le rendement et la qualité.</p>
+                </div>
+                <div class="services-item swiper-slide">
+                    <h2>Gestion Environnementale</h2>
+                    <p>Solutions pour une exploitation minière durable, incluant la réhabilitation des sites et la gestion des déchets.</p>
+                </div>
+                <div class="services-item swiper-slide">
+                    <h2>Conseil & Ingénierie</h2>
+                    <p>Expertise technique et stratégique pour optimiser les opérations minières et assurer la conformité réglementaire.</p>
+                </div>
+                <div class="services-item swiper-slide">
+                    <h2>Logistique & Exportation</h2>
+                    <p>Gestion de la chaîne d'approvisionnement, du transport sécurisé à l'exportation des ressources minérales.</p>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper-button-prev service-nav-prev"></div>
+        <div class="swiper-button-next service-nav-next"></div>
+        <div class="services-btn">
+                <div class="btn-savoir-plus">
+                        <a href="#">Voir plus</a>
+                        <div class="icon-savoir-plus">
+                            <i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </i>
+                        </div>
+                    </div>
+            </div>
+    </section>
+    <section class="projets-section">
+        <h1 class="section-title">Nos Projets Récents</h1>
+        <div class="projets swiper">
+            <div class="swiper-wrapper">
+                <div class="projet-item swiper-slide">
+                    <img src="images/projet1.jpeg" alt="Projet Minier 1" class="projet-img">
+                    <div class="projet-overlay">
+                        <a href="#" class="projet-link">Voir le projet</a>
+                    </div>
+                    <div class="projet-text">
+                        <h2>Mine d'Or de Bétaré-Oya</h2>
+                        <p>Optimisation de l'extraction et traitement pour augmenter le rendement de 25%.</p>
+                    </div>
+                </div>
+                <div class="projet-item swiper-slide">
+                    <img src="images/projet2.jpeg" alt="Projet Minier 2" class="projet-img">
+                    <div class="projet-overlay">
+                        <a href="#" class="projet-link">Voir le projet</a>
+                    </div>
+                    <div class="projet-text">
+                        <h2>Prospection de Diamants à Mobilong</h2>
+                        <p>Identification de nouveaux gisements alluvionnaires à fort potentiel.</p>
+                    </div>
+                </div>
+                <div class="projet-item swiper-slide">
+                    <img src="images/projet3.jpeg" alt="Projet Minier 3" class="projet-img">
+                    <div class="projet-overlay">
+                        <a href="#" class="projet-link">Voir le projet</a>
+                    </div>
+                    <div class="projet-text">
+                        <h2>Carrière de Sable de la Sanaga</h2>
+                        <p>Gestion durable et réhabilitation du site après exploitation.</p>
+                    </div>
+                </div>
+                <div class="projet-item swiper-slide">
+                    <img src="images/projet4.jpeg" alt="Projet Minier 4" class="projet-img">
+                    <div class="projet-overlay">
+                        <a href="#" class="projet-link">Voir le projet</a>
+                    </div>
+                    <div class="projet-text">
+                        <h2>Exploration de Bauxite à Ngaoundal</h2>
+                        <p>Étude de faisabilité pour une nouvelle zone d'exploitation à grande échelle.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="projets-btn">
+            <div class="btn-savoir-plus">
+                <a href="#">Voir plus</a>
+                <div class="icon-savoir-plus">
+                    <i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg></i>
+                </div>
+            </div>
+        </div>
+    </section>
     <section></section>
     <footer>
         <div class="footer-content">
@@ -102,5 +237,6 @@
             <p>&copy; 2023 EMPYRA MINING GROUP. Tous droits réservés.</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
