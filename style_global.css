@@ -198,9 +198,9 @@ footer {
   clip-path: ellipse(50% 50% at 50% 50%);
 }
 .footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 .footer-links a {
   display: flex;
@@ -231,9 +231,9 @@ footer {
   font-size: 15px;
 }
 .contact-item i {
-  display: flex;
-  align-items: center;
-  color: #c9a13a;
+    display: flex;
+    align-items: center;
+    color: #C9A13A;
 }
 @media (max-width: 900px) {
   .footer-content {
