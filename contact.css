@@ -15,8 +15,8 @@ body {
     background-position: center;
     flex-shrink: 0;
 }
-.contact-section h1{
-    padding-left: 50px;
+.contact-section h1 {
+    margin-right: 65%;
     padding: auto;
     font-size: 70px;
     color:#C9A13A;
