@@ -37,6 +37,17 @@
     new Swiper('.projets.swiper', {
         loop: true,
         spaceBetween: 30,
+        effect:'coverflow',
+        grabCursor: true,
+        centeredSlide:true,
+        slidesPerview:'auto',
+        coverflowEffect:{
+            rotate:50,
+            stretch:0,
+            depth:100,
+            modifier:1,
+            slideShadows:true,
+        },
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
