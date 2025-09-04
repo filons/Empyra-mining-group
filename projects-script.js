@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.2, // Trigger when 20% of element is visible
+      threshold: 0.1, // Trigger when 10% of element is visible
     }
   );
 

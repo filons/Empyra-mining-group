@@ -62,7 +62,7 @@ section.our-history {
 section.our-history div {
   flex: 1 1 0;
   border-radius: 30px;
-  width: 49%;
+  width: 40%;
 }
 
 .throwback-image {
@@ -104,15 +104,23 @@ section.mission-vision div:hover {
 }
 
 /*Leadership Section*/
+section.leadership {
+  box-shadow: 0 -5px 5px var(--light-gray);
+  padding: 2em 0;
+  border-radius: 30px;
+}
+
 div.leaders-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  padding: 0 1em;
 }
 
 .leaders {
-  width: 570px;
+  width: 30%;
+  min-width: 380px;
   transform: scale(1);
   transition: all 0.3s ease-out;
   position: relative;
@@ -278,6 +286,14 @@ div.milestone-container .milestone-group.hidden {
   section.our-history div {
     width: 100%;
   }
+
+  div.leaders-container {
+    gap: 30px;
+  }
+
+  /* .leaders {
+    width: 45%;
+  } */
 }
 
 @media (max-width: 1110px) {
@@ -313,6 +329,12 @@ div.milestone-container .milestone-group.hidden {
   }
 }
 
+@media (max-width: 920px) {
+  .leaders {
+    width: 100%;
+  }
+}
+
 @media (max-width: 720px) {
   h2 {
     font-size: 2.5rem;
@@ -329,11 +351,6 @@ div.milestone-container .milestone-group.hidden {
   .leaders div {
     height: 380px;
   }
-
-  /* div.milestone-container div {
-    width: 400px;
-    height: 300px;
-  } */
 
   div.milestone-container .milestone-group > div {
     flex-shrink: 0;
