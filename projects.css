@@ -6,18 +6,12 @@
 }
 
 html {
-  font-size: 16px;
-}
-
-body {
-  font-size: 1.25rem;
-  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
 /*Banner section*/
 section.banner {
-  border: 1px solid var(--gray);
-  height: 250px;
+  height: 300px;
   background-image: url(project-about-images/banner.jpg);
   background-position: 30% 70%;
   background-size: cover;
@@ -37,7 +31,7 @@ section.banner .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  height: 250px;
+  height: 300px;
   width: 100%;
   background-color: var(--light-gray);
 }
@@ -46,8 +40,8 @@ section.banner .overlay {
 section.projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 20px;
   margin: 50px 5%;
 }
 
@@ -91,7 +85,7 @@ section.projects article .project-description ul li {
 }
 
 /* Responsiveness for different screen sizes*/
-@media (max-width: 1110px) {
+@media (max-width: 1120px) {
   section.banner {
     height: 200px;
   }
