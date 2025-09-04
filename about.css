@@ -301,10 +301,6 @@ div.milestone-container .milestone-group.hidden {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
-/* .swiper {
-  width: 600px;
-  height: 300px;
-} */
 
 /* Responsiveness for different screen sizes*/
 @media (max-width: 1385px) {
