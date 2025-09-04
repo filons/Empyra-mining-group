@@ -84,7 +84,7 @@ section.projects article .project-description ul li {
 }
 
 /* Slide-in animation classes */
-.hero-content {
+/* .hero-content {
   opacity: 0;
   transform: translateY(-100px);
   transition: all 1s ease-out;
@@ -119,7 +119,7 @@ section.projects article .project-description ul li {
 .visible {
   opacity: 1;
   transform: translateX(0) translateY(0);
-}
+} */
 
 /* Responsiveness for different screen sizes*/
 @media (max-width: 1120px) {
