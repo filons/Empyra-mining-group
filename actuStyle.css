@@ -6,52 +6,36 @@ box-sizing: border-box;
 /* Bannière */
 
 .banner {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  
 
-background: url(images/Asset\ 1@3x.png) center/cover no-repeat;
-
-position: relative;
-
-z-index: 1;
-
-height: 450px;
-
-display: flex;
-
-align-items: center;
-
-justify-content: center;
-margin-bottom: 20px;
-
+}
+.banner-overlay {
+  background: url(images/Asset\ 1@3x.png) center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  background-color: red;
 }
 .banner::after {
-
-content: "";
-
-position: absolute;
-
-top: 0; left: 0;
-
-width: 100%; height: 100%;
-
-background: rgba(0, 0, 0, 0.5);
-
-z-index: 0;
-
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
-
-
 .banner h1 {
-
-font-size: 2.5rem;
-
-font-weight: bold;
-
-position: relative;
-
-z-index: 2;
-color: aliceblue;
-
+  font-size: 2.5rem;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+  color: aliceblue;
 }
 .gallery{
   width: 100%;

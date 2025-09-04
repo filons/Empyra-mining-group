@@ -5,12 +5,7 @@
   --light-gray: rgba(0, 0, 0, 0.3);
 }
 
-html {
-  font-size: 16px;
-}
-
 body {
-  font-size: 1.25rem;
   font-family: "Poppins", sans-serif;
 }
 

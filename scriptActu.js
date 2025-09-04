@@ -11,7 +11,8 @@ const swiper = new Swiper('.swiper', {
   },
   autoplay: {
     delay: 2000,
-    disableOnInteraction: false
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true
   },
   pagination: {
     el: '.swiper-pagination',
@@ -33,13 +34,6 @@ const swiper = new Swiper('.swiper', {
       slidesPerView: 3,
     }
   }
-});
-// Stop autoplay on mouse enter, resume on mouse leave
-document.querySelector('.gallery-wrapper.swiper').addEventListener('mouseenter', function() {
-  swiper.autoplay.stop();
-});
-document.querySelector('.gallery-wrapper.swiper').addEventListener('mouseleave', function() {
-  swiper.autoplay.start();
 });
 document.querySelectorAll('.triangle-btn').forEach((btn, i) => {
   btn.addEventListener('click', function() {
