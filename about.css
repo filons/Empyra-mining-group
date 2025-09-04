@@ -78,7 +78,7 @@ section.our-history div {
 }
 
 .brief-history {
-  padding: 1em 2em;
+  padding: 0 2em 2em 2em;
   box-shadow: 0 5px 5px var(--light-gray);
   overflow-y: auto;
 }
@@ -87,6 +87,8 @@ section.our-history div {
   position: sticky;
   top: 0;
   z-index: 5;
+  padding: 0.5em;
+  margin-bottom: 40px;
   background-color: var(--white);
 }
 
