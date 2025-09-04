@@ -16,7 +16,7 @@ body {
 
 /*Banner section*/
 section.banner {
-  height: 300px;
+  height: 200px;
   background-image: url(project-about-images/banner.jpg);
   background-position: 30% 70%;
   background-size: cover;
@@ -25,7 +25,7 @@ section.banner {
 }
 
 section.banner h1 {
-  color: var(--gold);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 70px;
 }
 
@@ -36,7 +36,7 @@ section.banner .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  height: 300px;
+  height: 200px;
   width: 100%;
   background-color: var(--light-gray);
 }
@@ -56,11 +56,12 @@ h2 {
 /*History Section*/
 section.our-history {
   display: flex;
+  justify-content: space-between;
   gap: 20px;
 }
 
 section.our-history div {
-  flex: 1 1 0;
+  width: 49%;
   border-radius: 30px;
 }
 
@@ -118,17 +119,16 @@ div.leaders-container {
 }
 
 .leaders {
-  flex: 1;
-  min-width: 380px;
+  width: 430px;
   cursor: pointer;
   overflow: hidden;
   transform: scale(1);
-  transition: all 0.1s ease-out;
+  transition: all 0.2s ease-out;
   position: relative;
 }
 
 .leaders div {
-  height: 420px;
+  height: 400px;
   border-radius: 30px;
 }
 
@@ -236,7 +236,7 @@ div.milestone-container .milestone-group.hidden {
 }
 
 /* Slide-in animation classes */
-.hero-content {
+/* .hero-content {
   opacity: 0;
   transform: translateY(-100px);
   transition: all 1s ease-out;
@@ -271,7 +271,7 @@ div.milestone-container .milestone-group.hidden {
 .visible {
   opacity: 1;
   transform: translateX(0) translateY(0);
-}
+} */
 
 /* Responsiveness for different screen sizes*/
 @media (max-width: 1385px) {
@@ -282,6 +282,10 @@ div.milestone-container .milestone-group.hidden {
 
   section.our-history div {
     width: 100%;
+  }
+
+  .throwback-image {
+    height: 420px;
   }
 
   div.leaders-container {
@@ -322,19 +326,27 @@ div.milestone-container .milestone-group.hidden {
   }
 }
 
-@media (max-width: 920px) {
+/* @media (max-width: 920px) {
   .leaders {
     width: 100%;
   }
-}
+} */
 
 @media (max-width: 720px) {
   h2 {
     font-size: 2.5rem;
   }
 
+  .throwback-image {
+    height: 390px;
+  }
+
   div.leaders-container {
     gap: 30px;
+  }
+
+  .leaders {
+    width: 100%;
   }
 
   .leaders div {
