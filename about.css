@@ -197,6 +197,10 @@ div.milestone-container {
   width: 100%;
 }
 
+/* div.milestone-container.tablet {
+  display: none;
+} */
+
 div.milestone-container .milestone-group {
   display: flex;
   justify-content: center;
@@ -297,6 +301,10 @@ div.milestone-container .milestone-group.hidden {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
+/* .swiper {
+  width: 600px;
+  height: 300px;
+} */
 
 /* Responsiveness for different screen sizes*/
 @media (max-width: 1385px) {
@@ -321,6 +329,14 @@ div.milestone-container .milestone-group.hidden {
 
   section.banner h1 {
     font-size: 3.5rem;
+  }
+
+  div.milestone-container .milestone-group > div {
+    flex-shrink: 0;
+    width: 49%;
+    height: 330px;
+    border-radius: 30px;
+    overflow: hidden;
   }
 }
 
@@ -352,8 +368,16 @@ div.milestone-container .milestone-group.hidden {
     height: 380px;
   }
 
-  div.milestone-container div {
+  /* div.milestone-container div {
     width: 400px;
     height: 300px;
+  } */
+
+  div.milestone-container .milestone-group > div {
+    flex-shrink: 0;
+    width: 49%;
+    height: 330px;
+    border-radius: 30px;
+    overflow: hidden;
   }
 }
