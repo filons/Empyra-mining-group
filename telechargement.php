@@ -82,11 +82,11 @@ if ($result) {
             <ul class="nav-links" id="nav-links">
                 <li class="item-menu"><a href="acceuil.html">Accueil</a></li>
                 <li class="item-menu"><a href="services.html">Services</a></li>
-                <li class="item-menu"><a href="#">Nos projets</a></li>
-                <li class="item-menu"><a href="#">À propos</a></li>
+                <li class="item-menu"><a href="projets.html">Nos projets</a></li>
+                <li class="item-menu"><a href="about.html">À propos</a></li>
                 <li class="item-menu"><a href="telechargement.php" class="active">Téléchargement</a></li>
                 <li class="item-menu"><a href="Contact.html">Contact</a></li>
-                <li class="item-menu"><a href="#">Actualités</a></li>
+                <li class="item-menu"><a href="actualites.php">Actualités</a></li>
             </ul>
         </nav>
     </header>
@@ -192,7 +192,7 @@ if ($result) {
                             <option value="" disabled selected>Sélectionnez un document</option>
                             <option value="Rapport annuel">PDF</option>
                             <option value="Données financières">EXCEL</option>
-                            <option value="Rapport RSE">Rapport RSE</option>
+                            <option value="Rapport RSE">IMG</option>
                             <option value="Brochure entreprise">Brochure entreprise</option>
                             <option value="Autre">Autre (précisez ci-dessous)</option>
                         </select>
