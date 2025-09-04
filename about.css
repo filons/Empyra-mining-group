@@ -26,8 +26,7 @@ section.banner {
 
 section.banner h1 {
   color: var(--gold);
-  font-weight: 600;
-  font-size: 4rem;
+  font-size: 70px;
 }
 
 section.banner .overlay {
@@ -68,6 +67,7 @@ section.our-history div {
 
 .throwback-image {
   height: 550px;
+  box-shadow: 0 5px 5px var(--light-gray);
 }
 
 .throwback-image img {
@@ -77,7 +77,8 @@ section.our-history div {
 }
 
 .brief-history {
-  height: fit-content;
+  padding: 1em 2em;
+  box-shadow: 0 5px 5px var(--light-gray);
 }
 
 /*Mission and Vision Section*/
@@ -95,49 +96,14 @@ section.mission-vision div {
   border-radius: 30px;
   padding: 1em 2em;
   box-shadow: 0 5px 5px var(--light-gray);
-  /* background-color: transparent; */
-  transition: background-color 0.3s ease-out;
-  /* position: relative; */
-  /* transition: animation 0.3s ease-out; */
+  transition: background-color 0.5s ease-out;
 }
 
 section.mission-vision div:hover {
   background-color: var(--light-gold);
 }
 
-/*section.mission-vision div::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 30px;
-  width: 100%;
-  height: 100%;
-  background-color: var(--light-gold);
-  opacity: 0;
-  transition: all 0.3s ease-out;
-}
-
-section.mission-vision div::before:hover {
-  opacity: 1;
-}
-
-@keyframes fall {
-  0% {
-    height: 0;
-  }
-
-  50% {
-    height: 50%;
-  }
-
-  100% {
-    height: 100%;
-  }
-}
-*/
-
-/*Leardership Section*/
+/*Leadership Section*/
 div.leaders-container {
   display: flex;
   flex-wrap: wrap;
