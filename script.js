@@ -5,6 +5,13 @@
         burger.classList.toggle('toggle');
     });
 
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            navLinks.classList.remove('nav-active');
+            burger.classList.remove('toggle');
+        }
+    });
+
     new Swiper('.services.swiper', {
         loop: true,
         spaceBetween: 30,
@@ -37,10 +44,10 @@
     new Swiper('.projets.swiper', {
         loop: true,
         spaceBetween: 30,
+        pauseOnMouseEnter: true,
         effect:'coverflow',
         grabCursor: true,
         centeredSlide:true,
-        slidesPerview:'auto',
         coverflowEffect:{
             rotate:50,
             stretch:0,
@@ -73,4 +80,3 @@
             },
         },
     });
->>>>>>>>> Temporary merge branch 2

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMPYRA MINING GROUP</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
@@ -52,14 +53,14 @@
             </div>
        </div>
     </section>
-    <section>
+    <section >
         <div class="presentation">
-            <h1>presentation</h1>
-            <div class="presentation-content">
-                <div class="img-presentation">
+            <h1 data-aos="fade-up" data-aos-duration="1500">presentation</h1>
+            <div class="presentation-content" >
+                <div class="img-presentation" data-aos="fade-right" data-aos-duration="1500">
                     <img src="images/presentation.jpg" alt="Image de présentation">
                 </div>
-                <div class="text-presentation">
+                <div class="text-presentation" data-aos="fade-left" data-aos-duration="1500">
                     <p>Empyra Mining Group est une société spécialisée dans l’extraction minière, 
     engagée à fournir des ressources de qualité tout en respectant les normes
     internationales de sécurité et de durabilité.Notre mission est de 
@@ -86,7 +87,7 @@
             </div>
         </div>
     </section>
-    <section class="services-section">
+    <section class="services-section" data-aos="fade-up" data-aos-duration="1500">
         <h1 class="section-title">Nos Services</h1>
         <div class="services swiper">
             <div class="services-content swiper-wrapper">
@@ -125,10 +126,10 @@
                                 </svg>
                             </i>
                         </div>
-                    </div>
-            </div>
+                </div>
+        </div>
     </section>
-    <section class="projets-section">
+    <section class="projets-section" data-aos="fade-up" data-aos-duration="1500">
         <h1 class="section-title">Nos Projets Récents</h1>
         <div class="projets swiper">
             <div class="swiper-wrapper">
@@ -248,6 +249,10 @@
             <p>&copy; 2023 EMPYRA MINING GROUP. Tous droits réservés.</p>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
