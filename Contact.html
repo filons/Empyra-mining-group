@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style_global.css">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -24,11 +25,11 @@
             <ul class="nav-links" id="nav-links">
                 <li class="item-menu"><a href="acceuil.html">acceuil</a></li>
                 <li class="item-menu"><a href="services.html">services</a></li>
-                <li class="item-menu"><a href="#">nos projets</a></li>
-                <li class="item-menu"><a href="#">a propos</a></li>
+                <li class="item-menu"><a href="projects.html">nos projets</a></li>
+                <li class="item-menu"><a href="about.html">a propos</a></li>
                 <li class="item-menu"><a href="telechargement.php">telechargement</a></li>
                 <li class="item-menu"><a href="Contact.html"  class="active">contact</a></li>
-                <li class="item-menu"><a href="#">actualites</a></li>
+                <li class="item-menu"><a href="actualites.html">actualites</a></li>
             </ul>
         </nav>
     </header>
@@ -37,7 +38,7 @@
             <h1>Contact</h1>
         </div>   
     </section>
-    <section class="form-section">
+    <section class="form-section" data-aos="fade-up" data-aos-duration="500">
         <div class="social-sidebar">
             <h3>Suivez-nous</h3>
             <div class="social-icons">
@@ -70,11 +71,11 @@
                 <input type="email" placeholder="Email">
                 <input type="text" placeholder="Sujet">
                 <textarea name="commentaire" placeholder="Votre message"></textarea>
-                <button type="submit">Envoyer</button>
+                <button type="submit" formaction="mailto:eketchadji@gmail.com" formmethod="post">Envoyer</button>
             </form>
         </div>
     </section>
-    <section class="contact-info-section">
+    <section class="contact-info-section" data-aos="fade-up" data-aos-duration="500">
         <div class="contact-container">
             <div class="contact-details">
                 <div class="contact-item">
@@ -177,7 +178,9 @@
             <p>&copy; 2023 EMPYRA MINING GROUP. Tous droits réservés.</p>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
-    <section></section>
-    
 </html>

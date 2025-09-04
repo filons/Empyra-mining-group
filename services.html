@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style_global.css">
     <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,11 +25,11 @@
             <ul class="nav-links" id="nav-links">
                 <li class="item-menu"><a href="acceuil.html" >acceuil</a></li>
                 <li class="item-menu"><a href="services.html"  class="active">services</a></li>
-                <li class="item-menu"><a href="#">nos projets</a></li>
-                <li class="item-menu"><a href="#">a propos</a></li>
+                <li class="item-menu"><a href="projects.html">nos projets</a></li>
+                <li class="item-menu"><a href="about.html">a propos</a></li>
                 <li class="item-menu"><a href="telechargement.php">telechargement</a></li>
                 <li class="item-menu"><a href="Contact.html">contact</a></li>
-                <li class="item-menu"><a href="#">actualites</a></li>
+                <li class="item-menu"><a href="actualites.html">actualites</a></li>
             </ul>
         </nav>
     </header>
@@ -37,41 +38,41 @@
             <h1>Services</h1>
         </div>   
     </section>
-    <section class="services-section">
+    <section class="services-section" data-aos="fade-up" data-aos-duration="500">
         <div class="services-container">
             <div class="services-item">
                 <p>Empyra Mining Group propose une gamme complète de services miniers pour soutenir les activités d'extraction et de traitement des matières premières.</p>
             </div>
             <div class="grid-container">
-                <div class="grid-item">
+                <div class="grid-item" data-aos="fade-right" data-aos-duration="1000">
                     <div class="icon-container">
                         <i class="fas fa-search-location"></i>
                     </div>
                     <h3>Exploration et Prospection</h3>
                     <p>Études géologiques et géophysiques. Forages et analyses d'échantillons. Évaluation des gisements.</p>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item" data-aos="fade-left" data-aos-duration="1000">
                     <div class="icon-container">
                         <i class="fas fa-calculator"></i>
                     </div>
                     <h3>Ingénierie et études de faisabilité</h3>
                     <p>Études environnementales et sociales. Conception technique du projet minier. Évaluation économique et planification.</p>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item" data-aos="fade-up" data-aos-duration="1000">
                     <div class="icon-container">
                         <i class="fas fa-hammer"></i>
                     </div>
                     <h3>Extraction et Exploitation</h3>
                     <p>Décapage, creusage et extraction. Traitement du minerai. Gestion des déchets miniers.</p>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item" data-aos="fade-right" data-aos-duration="1000">
                     <div class="icon-container">
                         <i class="fas fa-truck"></i>
                     </div>
                     <h3>Transport et logistique</h3>
                     <p>Transport du minerai brut. Exportation via route, rail ou port. Gestion de la chaîne logistique.</p>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item" data-aos="fade-left" data-aos-duration="1000">
                     <div class="icon-container">
                         <i class="fas fa-industry"></i>
                     </div>
@@ -79,14 +80,14 @@
                     <h3>Transformation et Valorisation</h3>
                     <p>Raffinage et purification des métaux. Production de produits dérivés. Optimisation des procédés.</p>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item" data-aos="fade-up" data-aos-duration="1000">
                     <div class="icon-container">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Sécurité et maintenance</h3>
                     <p>Gestion des risques d'exploitation. Formation en sécurité minière. Entretien des équipements.</p>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item" data-aos="fade-left" data-aos-duration="1000">
                     <div class="icon-container">
                         <i class="fas fa-leaf"></i>
                     </div>
@@ -96,7 +97,6 @@
             </div>
         </div>
     </section>
-</body>
 <footer>
     <div class="footer-content">
         <div class="footer-item">
@@ -147,8 +147,9 @@
         <p>&copy; 2023 EMPYRA MINING GROUP. Tous droits réservés.</p>
     </div>
 </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
-<section></section>
-
-</html>
 </html>

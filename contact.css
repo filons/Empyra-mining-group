@@ -8,7 +8,7 @@ body {
 
 .contact-section {
     position: relative;
-    height: 300px;
+    height: 200px;
     width: 100%;
     background-image: url('images/excavator.jpg');
     background-size: cover;
@@ -19,7 +19,8 @@ body {
     margin-right: 65%;
     padding: auto;
     font-size: 70px;
-    color:#C9A13A;
+    color:white;
+    opacity: 0.7;
 }
 .contact-section .overlay {
     position: absolute;
