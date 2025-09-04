@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A Propos</title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- <link
@@ -48,15 +52,15 @@
     <main>
       <section class="banner">
         <div class="overlay">
-          <h1 class="page-title">A Propos</h1>
+          <h1 class="page-title slide-in-left">A Propos</h1>
         </div>
       </section>
 
       <section class="our-history">
-        <div class="throwback-image">
+        <div class="throwback-image hero-content">
           <img src="project-about-images/throwback-img.jpg" alt="Throwbacks" />
         </div>
-        <div class="brief-history">
+        <div class="brief-history slide-in-right">
           <h2 class="section-title">Notre Histoire</h2>
           <p>
             Fondé en 2020, Empyra Mining Group (EMG) a été créé à Yaoundé avec
@@ -78,7 +82,7 @@
       </section>
 
       <section class="mission-vision">
-        <div class="mission">
+        <div class="mission slide-in-left">
           <h2>Our Mission</h2>
           <p>
             Empyra Mining Group is committed to responsibly harnessing
@@ -92,7 +96,7 @@
             stewardship and regulatory compliance.
           </p>
         </div>
-        <div class="vision">
+        <div class="vision slide-in-right">
           <h2>Our Vision</h2>
           <p>
             Empyra Mining Group continues to drive sustainable growth in
@@ -108,21 +112,21 @@
       </section>
 
       <section class="leadership">
-        <h2>Leadership</h2>
+        <h2 class="slide-in-top">Leadership</h2>
         <div class="leaders-container">
-          <div class="leaders CEO">
+          <div class="leaders CEO slide-in-left">
             <div>
               <img src="project-about-images/CEO-img.jpg" alt="CEO" />
             </div>
             <p>John Mbeke<br />CEO</p>
           </div>
-          <div class="leaders COO">
+          <div class="leaders COO slide-in-top">
             <div>
               <img src="project-about-images/COO-img.jpg" alt="COO" />
             </div>
             <p>Aisha Doumbia<br />COO</p>
           </div>
-          <div class="leaders HOO">
+          <div class="leaders HOO slide-in-right">
             <div>
               <img src="project-about-images/HOO-img.jpg" alt="HOO" />
             </div>
@@ -221,6 +225,119 @@
           <span class="indicator"></span>
         </div>
       </section>
+
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+
+      <!-- <section class="milestone tablet">
+        <h2>Milestone</h2>
+        <div class="milestone-container">
+          <div class="milestone-group">
+            <div>
+              <img
+                src="project-about-images/milestone1.jpg"
+                alt="Our Journey"
+              />
+            </div>
+            <div>
+              <img
+                src="project-about-images/milestone2.jpg"
+                alt="Our Journey"
+              />
+            </div>
+          </div>
+          <div class="milestone-group">
+            <div>
+              <img
+                src="project-about-images/milestone3.jpg"
+                alt="Our Journey"
+              />
+            </div>
+            <div>
+              <img
+                src="project-about-images/milestone4.jpg"
+                alt="Our Journey"
+              />
+            </div>
+          </div>
+
+          <div class="milestone-group">
+            <div>
+              <img
+                src="project-about-images/milestone1.jpg"
+                alt="Our Journey"
+              />
+            </div>
+            <div>
+              <img
+                src="project-about-images/milestone2.jpg"
+                alt="Our Journey"
+              />
+            </div>
+          </div>
+          <div class="milestone-group">
+            <div>
+              <img
+                src="project-about-images/milestone3.jpg"
+                alt="Our Journey"
+              />
+            </div>
+            <div>
+              <img
+                src="project-about-images/milestone4.jpg"
+                alt="Our Journey"
+              />
+            </div>
+          </div>
+
+          <div class="milestone-group">
+            <div>
+              <img
+                src="project-about-images/milestone1.jpg"
+                alt="Our Journey"
+              />
+            </div>
+            <div>
+              <img
+                src="project-about-images/milestone2.jpg"
+                alt="Our Journey"
+              />
+            </div>
+          </div>
+          <div class="milestone-group">
+            <div>
+              <img
+                src="project-about-images/milestone3.jpg"
+                alt="Our Journey"
+              />
+            </div>
+            <div>
+              <img
+                src="project-about-images/milestone4.jpg"
+                alt="Our Journey"
+              />
+            </div>
+          </div>
+        </div>
+      </section> -->
     </main>
 
     <footer>

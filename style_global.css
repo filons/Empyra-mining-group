@@ -202,6 +202,7 @@ footer {
     flex-direction: column;
     gap: 8px;
     padding: 50px 0;
+>>>>>>>>> Temporary merge branch 2
 }
 .footer-links a {
   display: flex;
@@ -231,6 +232,14 @@ footer {
   gap: 10px;
   font-size: 15px;
 }
+<<<<<<<<< Temporary merge branch 1
+.contact-item i {
+  display: flex;
+  align-items: center;
+  color: #c9a13a;
+}
+=========
+>>>>>>>>> Temporary merge branch 2
 @media (max-width: 900px) {
   .footer-content {
     flex-direction: column;

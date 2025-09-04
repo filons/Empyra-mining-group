@@ -1,22 +1,24 @@
 :root {
   --gray: #5a5a5a;
   --gold: #c9a13a;
+  --light-gold: #c9a03a85;
   --white: #ffffff;
   --light-gray: rgba(0, 0, 0, 0.3);
 }
 
-
+html {
+  font-size: 16px;
+}
 
 body {
-  /* font-size: 1.25rem; */
+  font-size: 1.25rem;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
 
 /*Banner section*/
 section.banner {
-  border: 1px solid var(--gray);
-  height: 250px;
+  height: 300px;
   background-image: url(project-about-images/banner.jpg);
   background-position: 30% 70%;
   background-size: cover;
@@ -37,7 +39,7 @@ section.banner .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  height: 250px;
+  height: 300px;
   width: 100%;
   background-color: var(--light-gray);
 }
@@ -57,12 +59,11 @@ h2 {
 /*History Section*/
 section.our-history {
   display: flex;
-  justify-content: center;
   gap: 20px;
 }
 
 section.our-history div {
-  flex: 1 0 300px;
+  flex: 1 1 0;
   border-radius: 30px;
   width: 49%;
 }
@@ -96,7 +97,47 @@ section.mission-vision div {
   border-radius: 30px;
   padding: 1em 2em;
   box-shadow: 0 5px 5px var(--light-gray);
+  /* background-color: transparent; */
+  transition: background-color 0.3s ease-out;
+  /* position: relative; */
+  /* transition: animation 0.3s ease-out; */
 }
+
+section.mission-vision div:hover {
+  background-color: var(--light-gold);
+}
+
+/*section.mission-vision div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-gold);
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+section.mission-vision div::before:hover {
+  opacity: 1;
+}
+
+@keyframes fall {
+  0% {
+    height: 0;
+  }
+
+  50% {
+    height: 50%;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+*/
 
 /*Leardership Section*/
 div.leaders-container {
@@ -110,12 +151,13 @@ div.leaders-container {
   width: 570px;
   transform: scale(1);
   transition: all 0.3s ease-out;
+  position: relative;
 }
 
 .leaders div {
   height: 420px;
   border-radius: 30px;
-  margin-bottom: 20px;
+  box-shadow: 0 5px 5px var(--light-gray);
 }
 
 .leaders img {
@@ -125,11 +167,17 @@ div.leaders-container {
 }
 
 .leaders p {
-  font-family: "Cinzel";
+  font-family: "Cinzel", serif;
   text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
   padding: 0.25em;
-  border: 1px solid var(--light-gray);
-  border-radius: 30px;
+  border-radius: 0 0 30px 30px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
   transition: all 0.3s ease-out;
 }
 
@@ -138,8 +186,8 @@ div.leaders-container {
 }
 
 .leaders:hover p {
-  background-color: var(--gold);
-  border: 1px solid transparent;
+  background-color: var(--light-gold);
+  opacity: 1;
 }
 
 /*Milestone Section*/
@@ -150,6 +198,10 @@ div.milestone-container {
   height: 350px;
   width: 100%;
 }
+
+/* div.milestone-container.tablet {
+  display: none;
+} */
 
 div.milestone-container .milestone-group {
   display: flex;
@@ -170,6 +222,7 @@ div.milestone-container .milestone-group > div {
   width: 420px;
   height: 330px;
   border-radius: 30px;
+  box-shadow: 0 5px 5px var(--light-gray);
 }
 
 div.milestone-container .milestone-group > div > img {
@@ -213,6 +266,48 @@ div.milestone-container .milestone-group.hidden {
   background-color: var(--gold);
 }
 
+/* Slide-in animation classes */
+.hero-content {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 1s ease-out;
+}
+.hero-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease-out;
+}
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease-out;
+}
+.slide-in-bottom {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s ease-out;
+}
+
+.slide-in-top {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 1s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+/* .swiper {
+  width: 600px;
+  height: 300px;
+} */
+
 /* Responsiveness for different screen sizes*/
 @media (max-width: 1385px) {
   section.our-history {
@@ -237,6 +332,14 @@ div.milestone-container .milestone-group.hidden {
   section.banner h1 {
     font-size: 3.5rem;
   }
+
+  div.milestone-container .milestone-group > div {
+    flex-shrink: 0;
+    width: 49%;
+    height: 330px;
+    border-radius: 30px;
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -255,16 +358,28 @@ div.milestone-container .milestone-group.hidden {
     font-size: 2.5rem;
   }
 
+  div.leaders-container {
+    gap: 30px;
+  }
+
   .leaders {
     width: 100%;
   }
 
   .leaders div {
-    height: 300px;
+    height: 380px;
   }
 
-  div.milestone-container div {
+  /* div.milestone-container div {
     width: 400px;
     height: 300px;
+  } */
+
+  div.milestone-container .milestone-group > div {
+    flex-shrink: 0;
+    width: 49%;
+    height: 330px;
+    border-radius: 30px;
+    overflow: hidden;
   }
 }

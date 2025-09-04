@@ -1,0 +1,14 @@
+# Désactiver l'affichage du contenu du dossier
+Options -Indexes
+
+# Empêcher l'exécution de fichiers PHP dans ce dossier
+<FilesMatch "\.(php|php5|php7|phtml)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Autoriser uniquement les téléchargements
+<FilesMatch "\.(pdf|doc|docx|xls|xlsx|ppt|pptx|jpg|jpeg|png|txt)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
