@@ -57,16 +57,17 @@ h2 {
 section.our-history {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
 }
 
 section.our-history div {
   width: 49%;
   border-radius: 30px;
+  height: 550px;
 }
 
 .throwback-image {
-  height: 550px;
   box-shadow: 0 5px 5px var(--light-gray);
 }
 
@@ -79,6 +80,14 @@ section.our-history div {
 .brief-history {
   padding: 1em 2em;
   box-shadow: 0 5px 5px var(--light-gray);
+  overflow-y: auto;
+}
+
+.brief-history h2 {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: var(--white);
 }
 
 /*Mission and Vision Section*/
@@ -119,7 +128,7 @@ div.leaders-container {
 }
 
 .leaders {
-  width: 430px;
+  width: min(400px, 100%);
   cursor: pointer;
   overflow: hidden;
   transform: scale(1);
@@ -136,7 +145,6 @@ div.leaders-container {
   width: 100%;
   height: 100%;
   border-radius: 30px;
-  box-shadow: 0 5px 5px var(--light-gray);
 }
 
 .leaders p {
@@ -235,63 +243,7 @@ div.milestone-container .milestone-group.hidden {
   background-color: var(--gold);
 }
 
-/* Slide-in animation classes */
-/* .hero-content {
-  opacity: 0;
-  transform: translateY(-100px);
-  transition: all 1s ease-out;
-}
-.hero-content.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.slide-in-left {
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: all 1s ease-out;
-}
-.slide-in-right {
-  opacity: 0;
-  transform: translateX(100px);
-  transition: all 1s ease-out;
-}
-.slide-in-bottom {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: all 1s ease-out;
-}
-
-.slide-in-top {
-  opacity: 0;
-  transform: translateY(-100px);
-  transition: all 1s ease-out;
-}
-
-.visible {
-  opacity: 1;
-  transform: translateX(0) translateY(0);
-} */
-
 /* Responsiveness for different screen sizes*/
-@media (max-width: 1385px) {
-  section.our-history {
-    flex-direction: column-reverse;
-    gap: 30px;
-  }
-
-  section.our-history div {
-    width: 100%;
-  }
-
-  .throwback-image {
-    height: 420px;
-  }
-
-  div.leaders-container {
-    gap: 30px;
-  }
-}
 
 @media (max-width: 1110px) {
   section.banner {
@@ -304,6 +256,27 @@ div.milestone-container .milestone-group.hidden {
 
   section.banner h1 {
     font-size: 3.5rem;
+  }
+
+  section.our-history {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  section.our-history div {
+    width: 100%;
+  }
+
+  section.our-history .brief-history {
+    height: fit-content;
+  }
+
+  section.our-history .throwback-image {
+    height: 420px;
+  }
+
+  div.leaders-container {
+    gap: 30px;
   }
 
   div.milestone-container .milestone-group > div {
@@ -326,31 +299,21 @@ div.milestone-container .milestone-group.hidden {
   }
 }
 
-/* @media (max-width: 920px) {
-  .leaders {
-    width: 100%;
-  }
-} */
-
 @media (max-width: 720px) {
   h2 {
     font-size: 2.5rem;
   }
 
-  .throwback-image {
-    height: 390px;
+  section.our-history .throwback-image {
+    height: 360px;
   }
 
   div.leaders-container {
     gap: 30px;
   }
 
-  .leaders {
-    width: 100%;
-  }
-
   .leaders div {
-    height: 340px;
+    height: 320px;
   }
 
   div.milestone-container .milestone-group > div {

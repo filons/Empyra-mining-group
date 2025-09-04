@@ -83,44 +83,6 @@ section.projects article .project-description ul li {
   list-style-position: inside;
 }
 
-/* Slide-in animation classes */
-/* .hero-content {
-  opacity: 0;
-  transform: translateY(-100px);
-  transition: all 1s ease-out;
-}
-.hero-content.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.slide-in-left {
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: all 1s ease-out;
-}
-.slide-in-right {
-  opacity: 0;
-  transform: translateX(100px);
-  transition: all 1s ease-out;
-}
-.slide-in-bottom {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: all 1s ease-out;
-}
-
-.slide-in-top {
-  opacity: 0;
-  transform: translateY(-100px);
-  transition: all 1s ease-out;
-}
-
-.visible {
-  opacity: 1;
-  transform: translateX(0) translateY(0);
-} */
-
 /* Responsiveness for different screen sizes*/
 @media (max-width: 1120px) {
   section.banner {
