@@ -13,6 +13,7 @@ html {
 
 body {
   overflow-x: hidden;
+  font-size: 1.125rem;
 }
 
 /*Banner section*/
@@ -65,7 +66,7 @@ section.our-history {
 section.our-history div {
   width: 49%;
   border-radius: 30px;
-  height: 480px;
+  height: 450px;
 }
 
 .throwback-image {
@@ -271,7 +272,7 @@ div.milestone-container .milestone-group.hidden {
   }
 
   section.our-history .brief-history {
-    height: fit-content;
+    height: 500px;
   }
 
   section.our-history .throwback-image {

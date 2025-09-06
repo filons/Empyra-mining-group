@@ -7,7 +7,7 @@
 
 html {
   scroll-behavior: smooth; /* Smooth scrolling for anchor links */
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /*Banner section*/
@@ -64,7 +64,7 @@ section.projects article .project-image h2 {
   transform: translate(-50%, -50%);
   width: 80%;
   color: var(--white);
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 600;
 }
 
