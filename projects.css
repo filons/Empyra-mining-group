@@ -6,17 +6,8 @@
 }
 
 html {
-<<<<<<< HEAD
   scroll-behavior: smooth; /* Smooth scrolling for anchor links */
   font-size: 16px;
-=======
-  font-size: 16px;
-}
-
-body {
-  font-size: 1.25rem;
-  font-family: "Poppins", sans-serif;
->>>>>>> d9bf7bca3ce340c2dbb3e6a2b88efaf29989fcd9
 }
 
 /*Banner section*/
@@ -73,7 +64,7 @@ section.projects article .project-image h2 {
   transform: translate(-50%, -50%);
   width: 80%;
   color: var(--white);
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 600;
 }
 
