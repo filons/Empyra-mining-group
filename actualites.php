@@ -1,25 +1,37 @@
+<?php
+require_once 'config.php';
+
+// Récupérer les actualités depuis la base de données
+$sql = "SELECT * FROM actualites WHERE statut = 'publie' ORDER BY date_publication DESC";
+$result = mysqli_query($conn, $sql);
+$actualites = [];
+$categories = [
+    'AACTUALITÉS ÉCONOMIQUES ET STRATÉGIQUES' => 'ACTUALITÉS ÉCONOMIQUES ET STRATÉGIQUES',
+    'ACTUALITÉS SOCIALES ET ENVIRONNEMENTALES' => 'ACTUALITÉS SOCIALES ET ENVIRONNEMENTALES',
+    'AUTRES ACTUALITÉS' => 'AUTRES ACTUALITÉS'
+];
+
+// Organiser les actualités par catégorie en maintenant l'ordre de date décroissant
+while ($row = mysqli_fetch_assoc($result)) {
+    if (isset($actualites[$row['categorie']])) {
+        array_push($actualites[$row['categorie']], $row);
+    } else {
+        $actualites[$row['categorie']] = [$row];
+    }
+}
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Actualités - Empyra Mining Group</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style_global.css">
   <link rel="stylesheet" href="actuStyle.css">
   <script src="script.js" defer></script>
   <script src="scriptActu.js" defer></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMPYRA MINING GROUP</title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
-    <link rel="stylesheet" href="style_global.css">
-    <link rel="stylesheet" href="acceuil.css">
-    <script src="script.js" defer></script>
-    
 </head>
 <body>
    <header>
@@ -33,25 +45,22 @@
                 <span></span>
             </div>
             <ul class="nav-links" id="nav-links">
-                <li class="item-menu"><a href="acceuil.html" >acceuil</a></li>
+                <li class="item-menu"><a href="index.html">acceuil</a></li>
                 <li class="item-menu"><a href="services.html">services</a></li>
                 <li class="item-menu"><a href="projects.html">nos projets</a></li>
                 <li class="item-menu"><a href="about.html">a propos</a></li>
                 <li class="item-menu"><a href="telechargement.php">telechargement</a></li>
                 <li class="item-menu"><a href="Contact.html">contact</a></li>
-                <li class="item-menu"><a href="actualites.html" class="active">actualites</a></li>
+                <li class="item-menu"><a href="actualites.php" class="active">actualites</a></li>
             </ul>
         </nav>
     </header>
-    <!-- Banner -->
-<section class="banner">
-
-  <div class="banner-overlay">
-
-     <h1>Actualités</h1>
-  </div>
-</section>
-<section class="gallery" data-aos="fade-up" data-aos-duration="500">
+    <section class ="contact-section">
+        <div class="overlay">
+            <h1>Actualités</h1>
+        </div>   
+    </section>
+<section class="gallery">
   <div class="gallery-wrapper swiper">
     <div class="gallery-container swiper-wrapper">
       <div class="gallery-item swiper-slide">
@@ -100,63 +109,45 @@
   </div> <!-- If we need navigation buttons -->
 </section>
 
-    <div class="container" data-aos="fade-up" data-aos-duration="500">
+    <div class="container">
         <h1 class="main-title">NEWS</h1>
-
-        <div class="news-section">
-       <div class="section-header">
-       <button type="button" class="triangle-btn" aria-label="Afficher/cacher la section">
-      <span class="triangle">&#9654;</span>
-    </button>
-    <h2>ACTUALITÉS ÉCONOMIQUES ET STRATÉGIQUES</h2>
-  </div>
-  <div class="news-item collapsible">
-    <div class="image-container">
-                    <img src="images/handshake.jpeg" alt="Image de poignée de main">
-                </div>
-                <div class="text-container">
-                    <h3>ACCORD PROJET GRAND ZAMBI – EXPLOITATION DE FER DANS LA RÉGION DU SUD</h3>
-                 <p>G-Stones Resources, filiale du groupe Bocom, a obtenu un permis d’exploitation de 14 ans pour le gisement de Grand Zambi, couvrant 47 km² et contenant environ 500 000 m³ de minerai brut. Le début des exportations est prévu pour juin 2025.</p>
-                </div>
-  </div>
-</div>
-        <div class="news-section">
-            <div class="section-header">
-              <button type="button" class="triangle-btn" aria-label="Afficher/cacher la section">
-                <span class="triangle">&#9654;</span>
-                </button>
-                <h2>ACTUALITÉS SOCIALES ET ENVIRONNEMENTALES</h2>
-
-            </div>
-            <div class="news-item collapsible">
-                <div class="image-container">
-                    <img src="images/femme business.jpeg" alt="Image de fumée sortant d'une cheminée">
-                </div>
-                <div class="text-container">
-                    <h3>EMPYRA MINING GROUP LANCE UN PROGRAMME DE REBOISEMENT AUTOUR DE SON SITE D’EXPLOITATION</h3>
-                    <p>EMPYRA MINING GROUP, en partenariat avec le Ministère de l’Environnement, a lancé en août 2025 une vaste campagne de reboisement dans la région de l’Est du Cameroun. Plus de 50 000 jeunes plants d’arbres seront mis en terre afin de restaurer les zones dégradées par l’exploitation aurifère artisanale.</p>
-                </div>
-            </div>
-        </div>
+        
+        <?php foreach ($categories as $categorie_id => $categorie_titre): ?>
+            <?php if (!empty($actualites[$categorie_id])): ?>
                 <div class="news-section">
-       <div class="section-header">
-       <button type="button" class="triangle-btn" aria-label="Afficher/cacher la section">
-      <span class="triangle">&#9654;</span>
-    </button>
-    <h2>ACTUALITÉS ÉCONOMIQUES ET STRATÉGIQUES</h2>
-  </div>
-  <div class="news-item collapsible">
-    <div class="image-container">
-                    <img src="images/download (20).jpeg" alt="Image de poignée de main">
+                    <div class="section-header">
+                        <button type="button" class="triangle-btn" aria-label="Afficher/cacher la section">
+                            <span class="triangle">&#9654;</span>
+                        </button>
+                        <h2><?php echo $categorie_titre; ?></h2>
+                    </div>
+                    
+                    <?php foreach ($actualites[$categorie_id] as $actualite): 
+                        $date_publication = date('d/m/Y', strtotime($actualite['date_publication']));
+                    ?>
+                        <div class="news-item collapsible">
+                            <?php if (!empty($actualite['image_url'])): ?>
+                                <div class="image-container">
+                                    <img src="<?php echo htmlspecialchars($actualite['image_url']); ?>" alt="<?php echo htmlspecialchars($actualite['titre']); ?>">
+                                </div>
+                            <?php endif; ?>
+                            <div class="text-container">
+                                <h3><?php echo htmlspecialchars($actualite['titre']); ?></h3>
+                                <div class="actualite-meta">
+                                    <span>Publié le <?php echo $date_publication; ?></span>
+                                    <?php if (!empty($actualite['auteur'])): ?>
+                                        <span> | Auteur: <?php echo htmlspecialchars($actualite['auteur']); ?></span>
+                                    <?php endif; ?>
+                                </div>
+                                <p><?php echo nl2br(htmlspecialchars($actualite['contenu'])); ?></p>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-                <div class="text-container">
-                    <h3>ACCORD PROJET GRAND ZAMBI – EXPLOITATION DE FER DANS LA RÉGION DU SUD</h3>
-                 <p>G-Stones Resources, filiale du groupe Bocom, a obtenu un permis d’exploitation de 14 ans pour le gisement de Grand Zambi, couvrant 47 km² et contenant environ 500 000 m³ de minerai brut. Le début des exportations est prévu pour juin 2025.</p>
-                </div>
-  </div>
-</div>
+            <?php endif; ?>
+        <?php endforeach; ?>
     </div>
-     <footer>
+    <footer>
         <div class="footer-content">
             <div class="footer-item">
                 <div class="footer-item-logo">
@@ -181,12 +172,12 @@
                 </div>
             </div>
             <div class="footer-links footer-item">
-                <a href="services.html"><i><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="vertical-align:middle;"><path d="M4 8h8M8 4l4 4-4 4" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>services</span></a>
-                <a href="about.html"><i><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="vertical-align:middle;"><path d="M4 8h8M8 4l4 4-4 4" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>a propos</span></a>
-                <a href="projects.html"><i><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="vertical-align:middle;"><path d="M4 8h8M8 4l4 4-4 4" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Nos projets</span></a>
-                <a href="telechargement.php"><i><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="vertical-align:middle;"><path d="M4 8h8M8 4l4 4-4 4" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>telechargement</span></a>
-                <a href="Contact.html"><i><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="vertical-align:middle;"><path d="M4 8h8M8 4l4 4-4 4" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>contact</span></a>
-                <a href="actualites.html"><i><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="vertical-align:middle;"><path d="M4 8h8M8 4l4 4-4 4" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>actualites</span></a>
+                <a href="#"><i><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="vertical-align:middle;"><path d="M4 8h8M8 4l4 4-4 4" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>services</span></a>
+                <a href="#"><i><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="vertical-align:middle;"><path d="M4 8h8M8 4l4 4-4 4" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>a propos</span></a>
+                <a href="#"><i><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="vertical-align:middle;"><path d="M4 8h8M8 4l4 4-4 4" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Nos projets</span></a>
+                <a href="#"><i><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="vertical-align:middle;"><path d="M4 8h8M8 4l4 4-4 4" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>telechargement</span></a>
+                <a href="#"><i><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="vertical-align:middle;"><path d="M4 8h8M8 4l4 4-4 4" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>contact</span></a>
+                <a href="#"><i><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="vertical-align:middle;"><path d="M4 8h8M8 4l4 4-4 4" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>actualites</span></a>
             </div>
             <div class="footer-item">
                 <h6>Contacter nous</h6>
@@ -216,10 +207,6 @@
             <p>&copy; 2023 EMPYRA MINING GROUP. Tous droits réservés.</p>
         </div>
     </footer>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>

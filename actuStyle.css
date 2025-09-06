@@ -3,39 +3,31 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
-/* Bannière */
-
-.banner {
+.contact-section {
   position: relative;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  
-
+  height: 200px;
+  width: 100%;
+  background-image: url('images/excavator.jpg');
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
 }
-.banner-overlay {
-  background: url(images/Asset\ 1@3x.png) center/cover no-repeat;
+.contact-section h1 {
+  margin-right: 65%;
+  padding: auto;
+  font-size: 70px;
+  color:#C9A13A;
+}
+.contact-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: red;
-}
-.banner::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-}
-
-.banner h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  position: relative;
-  z-index: 2;
-  color: aliceblue;
+  background: rgba(0, 0, 0, 0.3); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .gallery{
   width: 100%;

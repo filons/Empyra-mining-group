@@ -6,38 +6,34 @@
 }
 
 html {
-  font-size: 16px;
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
-body {
-  font-size: 1.25rem;
-  font-family: "Poppins", sans-serif;
-}
-
-/*Banner section*/
-section.banner {
-  height: 200px;
-  background-image: url(project-about-images/banner.jpg);
-  background-position: 30% 70%;
-  background-size: cover;
+.contact-section {
   position: relative;
+  height: 200px;
+  width: 100%;
+  background-image: url('images/excavator.jpg');
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
 }
-
-section.banner h1 {
-  color: rgba(255, 255, 255, 0.7);
+.contact-section h1 {
+  margin-right: 65%;
+  padding: auto;
   font-size: 70px;
+  color:#C9A13A;
 }
-
-section.banner .overlay {
-  padding: 0 5%;
-  display: flex;
-  align-items: center;
+.contact-section .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  height: 200px;
   width: 100%;
-  background-color: var(--light-gray);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Main Projects*/
@@ -46,7 +42,7 @@ section.projects {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
-  margin: 50px 5%;
+  margin: 40px 5%;
 }
 
 section.projects article {
@@ -58,7 +54,7 @@ section.projects article {
 
 section.projects article .project-image {
   position: relative;
-  height: 400px;
+  height: 300px;
 }
 
 section.projects article .project-image h2 {
@@ -68,7 +64,7 @@ section.projects article .project-image h2 {
   transform: translate(-50%, -50%);
   width: 80%;
   color: var(--white);
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 600;
 }
 

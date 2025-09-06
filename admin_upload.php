@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $uploadOk = 0;
     }
     
-    // Vérifier la taille du fichier (max 10MB)
+   
     if ($_FILES["fichier"]["size"] > 10000000) {
         $message = "Désolé, votre fichier est trop volumineux.";
         $uploadOk = 0;
@@ -213,13 +213,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <span></span>
             </div>
             <ul class="nav-links" id="nav-links">
-                <li class="item-menu"><a href="acceuil.html">Accueil</a></li>
-                <li class="item-menu"><a href="services.html">Services</a></li>
-                <li class="item-menu"><a href="#">Nos projets</a></li>
-                <li class="item-menu"><a href="#">À propos</a></li>
-                <li class="item-menu"><a href="telechargement.php">Téléchargement</a></li>
-                <li class="item-menu"><a href="Contact.html">Contact</a></li>
-                <li class="item-menu"><a href="#">Actualités</a></li>
+                <li class="item-menu"><a href="admin_upload.php" class="active">InsertionDocucument</a></li>
+                <li class="item-menu"><a href="admin_upload_Actu.php">InsertionActualités</a></li>
             </ul>
         </nav>
     </header>

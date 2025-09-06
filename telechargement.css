@@ -67,41 +67,8 @@ p {
     margin-bottom: 1rem;
 }
 
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
 
-a:hover {
-    color: var(--primary-dark);
-    text-decoration: underline;
-}
 
-.privacy-modal-footer {
-    padding: 15px 30px 30px;
-    text-align: right;
-    background-color: #f9f9f9;
-    border-top: 1px solid #eee;
-}
-
-.btn-accept {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.btn-accept:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 /* Animation d'ouverture/fermeture */
 @keyframes modalFadeIn {
@@ -155,58 +122,32 @@ a:hover {
     border-radius: 2px;
 }
 
-/* ==================== */
-/* SECTIONS SPÉCIFIQUES */
-/* ==================== */
 .contact-section {
     position: relative;
-    height: 400px;
+    height: 200px;
     width: 100%;
     background-image: url('images/excavator.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    overflow: hidden;
+    flex-shrink: 0;
 }
-
-.contact-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--dark-overlay);
-    z-index: 1;
-}
-
 .contact-section h1 {
-    position: relative;
-    z-index: 2;
-    font-size: 3.5rem;
-    color: var(--primary-color);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin: 0;
-    padding: 0 1.5rem;
+    margin-right: 40%;
+    padding: auto;
+    font-size: 70px;
+    color:#C9A13A;
 }
-
-.overlay {
+.contact-section .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.3); 
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
-}
-
+  }
 
 @media (max-width: 480px) {
     .form-header h2 {
