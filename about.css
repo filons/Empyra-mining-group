@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+  font-size: 16px;
 }
 
 body {
@@ -64,7 +65,7 @@ section.our-history {
 section.our-history div {
   width: 49%;
   border-radius: 30px;
-  height: 550px;
+  height: 480px;
 }
 
 .throwback-image {
@@ -103,7 +104,7 @@ section.mission-vision div {
   flex-direction: column;
   justify-content: center;
   width: 49%;
-  min-height: 500px;
+  min-height: 480px;
   border-radius: 30px;
   padding: 1em 2em;
   box-shadow: 0 5px 5px var(--light-gray);
@@ -139,7 +140,7 @@ div.leaders-container {
 }
 
 .leaders div {
-  height: 400px;
+  height: 380px;
   border-radius: 30px;
 }
 

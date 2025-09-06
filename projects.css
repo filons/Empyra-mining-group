@@ -7,6 +7,7 @@
 
 html {
   scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+  font-size: 16px;
 }
 
 /*Banner section*/
