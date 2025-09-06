@@ -7,13 +7,13 @@
 }
 
 html {
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
   font-size: 16px;
 }
 
 body {
-  font-size: 1.25rem;
-  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  font-size: 1.125rem;
 }
 
 /*Banner section*/
@@ -66,7 +66,7 @@ section.our-history {
 section.our-history div {
   width: 49%;
   border-radius: 30px;
-  height: 550px;
+  height: 450px;
 }
 
 .throwback-image {
@@ -80,7 +80,7 @@ section.our-history div {
 }
 
 .brief-history {
-  padding: 1em 2em;
+  padding: 0 2em 2em 2em;
   box-shadow: 0 5px 5px var(--light-gray);
   overflow-y: auto;
 }
@@ -89,6 +89,8 @@ section.our-history div {
   position: sticky;
   top: 0;
   z-index: 5;
+  padding: 0.5em;
+  margin-bottom: 40px;
   background-color: var(--white);
 }
 
@@ -103,7 +105,7 @@ section.mission-vision div {
   flex-direction: column;
   justify-content: center;
   width: 49%;
-  min-height: 500px;
+  min-height: 480px;
   border-radius: 30px;
   padding: 1em 2em;
   box-shadow: 0 5px 5px var(--light-gray);
@@ -139,7 +141,7 @@ div.leaders-container {
 }
 
 .leaders div {
-  height: 400px;
+  height: 380px;
   border-radius: 30px;
 }
 
@@ -270,7 +272,7 @@ div.milestone-container .milestone-group.hidden {
   }
 
   section.our-history .brief-history {
-    height: fit-content;
+    height: 500px;
   }
 
   section.our-history .throwback-image {
