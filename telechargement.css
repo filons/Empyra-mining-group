@@ -135,7 +135,7 @@ p {
     margin-right: 40%;
     padding: auto;
     font-size: 70px;
-    color:#C9A13A;
+    color:rgba(255, 255, 255, 0.7);
 }
 .contact-section .overlay {
     position: absolute;

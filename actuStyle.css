@@ -6,6 +6,7 @@ box-sizing: border-box;
 .contact-section {
   position: relative;
   height: 200px;
+  height: 200px;
   width: 100%;
   background-image: url('images/excavator.jpg');
   background-size: cover;
