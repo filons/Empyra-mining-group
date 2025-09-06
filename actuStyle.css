@@ -3,25 +3,14 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
-/* Bannière */
-
-.banner {
-
-background: url(images/Asset\ 1@3x.png) center/cover no-repeat;
-
-position: relative;
-
-z-index: 1;
-
-height: 450px;
-
-display: flex;
-
-align-items: center;
-
-justify-content: center;
-margin-bottom: 20px;
-
+.contact-section {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  background-image: url('images/excavator.jpg');
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
 }
 .banner::after {
 

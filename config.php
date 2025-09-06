@@ -14,7 +14,7 @@ if($conn === false){
     die("ERREUR : Impossible de se connecter. " . mysqli_connect_error());
 }
 
-// Créer la table si elle n'existe pas
+// Créer la table fichiers si elle n'existe pas
 $sql = "CREATE TABLE IF NOT EXISTS fichiers (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom_fichier VARCHAR(255) NOT NULL,
@@ -26,6 +26,22 @@ $sql = "CREATE TABLE IF NOT EXISTS fichiers (
 )";
 
 if (!mysqli_query($conn, $sql)) {
-    echo "Erreur lors de la création de la table: " . mysqli_error($conn);
+    echo "Erreur lors de la création de la table fichiers: " . mysqli_error($conn);
+}
+
+// Créer la table actualites si elle n'existe pas
+$sql = "CREATE TABLE IF NOT EXISTS actualites (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titre VARCHAR(255) NOT NULL,
+    contenu TEXT NOT NULL,
+    image_url VARCHAR(255) DEFAULT '',
+    categorie VARCHAR(100) NOT NULL,
+    auteur VARCHAR(100) NOT NULL DEFAULT 'Administrateur',
+    statut ENUM('brouillon', 'publie') DEFAULT 'publie',
+    date_publication TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
+
+if (!mysqli_query($conn, $sql)) {
+    echo "Erreur lors de la création de la table actualites: " . mysqli_error($conn);
 }
 ?>

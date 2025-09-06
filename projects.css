@@ -6,8 +6,17 @@
 }
 
 html {
+<<<<<<< HEAD
   scroll-behavior: smooth; /* Smooth scrolling for anchor links */
   font-size: 16px;
+=======
+  font-size: 16px;
+}
+
+body {
+  font-size: 1.25rem;
+  font-family: "Poppins", sans-serif;
+>>>>>>> d9bf7bca3ce340c2dbb3e6a2b88efaf29989fcd9
 }
 
 /*Banner section*/
