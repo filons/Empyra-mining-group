@@ -8,12 +8,10 @@
 
 html {
   scroll-behavior: smooth; /* Smooth scrolling for anchor links */
-  font-size: 16px;
 }
 
 body {
   overflow-x: hidden;
-  font-size: 1.125rem;
 }
 
 /*Banner section*/
@@ -101,9 +99,6 @@ section.mission-vision {
 }
 
 section.mission-vision div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 49%;
   min-height: 480px;
   border-radius: 30px;
@@ -118,21 +113,24 @@ section.mission-vision div:hover {
 
 /*Leadership Section*/
 section.leadership {
-  box-shadow: 0 -5px 5px var(--light-gray);
   padding: 2em 0;
   border-radius: 30px;
+  box-shadow: 0 0 5px var(--light-gray);
 }
 
 div.leaders-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
-  padding: 0 1em;
+  padding: 1em;
+  width: 100%;
 }
 
 .leaders {
-  width: min(400px, 100%);
+  flex: 1 1 300px; /* Grow, shrink, and base width */
+  max-width: 380px; /* Max width for each card */
+  min-width: 280px; /* Min width for smaller screens */
   cursor: pointer;
   overflow: hidden;
   transform: scale(1);
@@ -141,7 +139,7 @@ div.leaders-container {
 }
 
 .leaders div {
-  height: 380px;
+  height: 350px;
   border-radius: 30px;
 }
 
@@ -155,7 +153,7 @@ div.leaders-container {
   font-family: "Cinzel", serif;
   text-align: center;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0.25em;
   border-radius: 0 0 30px 30px;
   position: absolute;
@@ -303,7 +301,7 @@ div.milestone-container .milestone-group.hidden {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   h2 {
     font-size: 2.5rem;
   }
@@ -316,6 +314,11 @@ div.milestone-container .milestone-group.hidden {
     gap: 30px;
   }
 
+  .leaders {
+    flex: 1 1 100%; /* Stack cards on small screens */
+    max-width: 500px; /* Allow cards to take more width */
+  }
+
   .leaders div {
     height: 320px;
   }
@@ -326,5 +329,11 @@ div.milestone-container .milestone-group.hidden {
     height: 330px;
     border-radius: 30px;
     overflow: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .leaders {
+    min-width: 100%; /* Full width for very small screens */
   }
 }
