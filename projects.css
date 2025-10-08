@@ -1,0 +1,123 @@
+:root {
+  --gray: #5a5a5a;
+  --gold: #c9a13a;
+  --white: #ffffff;
+  --light-gray: rgba(0, 0, 0, 0.3);
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1.25rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/*Banner section*/
+section.banner {
+  border: 1px solid var(--gray);
+  height: 250px;
+  background-image: url(project-about-images/banner.jpg);
+  background-position: 30% 70%;
+  background-size: cover;
+  position: relative;
+}
+
+section.banner h1 {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+section.banner .overlay {
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 100%;
+  background-color: var(--light-gray);
+}
+
+/*Main Projects*/
+section.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px 5%;
+}
+
+section.projects article {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray);
+}
+
+section.projects article .project-image {
+  position: relative;
+  height: 400px;
+}
+
+section.projects article .project-image h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+section.projects article .project-image img {
+  width: 100%;
+  height: 100%;
+}
+
+section.projects article .project-description ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+section.projects article .project-description ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+/* Responsiveness for different screen sizes*/
+@media (max-width: 1110px) {
+  section.banner {
+    height: 200px;
+  }
+
+  section.banner .overlay {
+    height: 200px;
+  }
+
+  section.banner h1 {
+    font-size: 3.5rem;
+  }
+
+  section.projects {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  section.projects article {
+    width: 100%;
+  }
+
+  section.projects article .project-image {
+    height: 250px;
+  }
+
+  section.projects article .project-image h2 {
+    font-size: 2rem;
+  }
+}

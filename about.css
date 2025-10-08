@@ -1,0 +1,272 @@
+:root {
+  --gray: #5a5a5a;
+  --gold: #c9a13a;
+  --white: #ffffff;
+  --light-gray: rgba(0, 0, 0, 0.3);
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1.25rem;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/*Banner section*/
+section.banner {
+  border: 1px solid var(--gray);
+  height: 250px;
+  background-image: url(project-about-images/banner.jpg);
+  background-position: 30% 70%;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+section.banner h1 {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+section.banner .overlay {
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 100%;
+  background-color: var(--light-gray);
+}
+
+section:not(.banner) {
+  margin: 0 5% 100px 5%;
+}
+
+h2 {
+  font-size: 3rem;
+  color: var(--gray);
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
+/*History Section*/
+section.our-history {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+section.our-history div {
+  flex: 1 0 300px;
+  border-radius: 30px;
+  width: 49%;
+}
+
+.throwback-image {
+  height: 550px;
+}
+
+.throwback-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.brief-history {
+  height: fit-content;
+}
+
+/*Mission and Vision Section*/
+section.mission-vision {
+  display: flex;
+  gap: 20px;
+}
+
+section.mission-vision div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 49%;
+  min-height: 500px;
+  border-radius: 30px;
+  padding: 1em 2em;
+  box-shadow: 0 5px 5px var(--light-gray);
+}
+
+/*Leardership Section*/
+div.leaders-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.leaders {
+  width: 570px;
+  transform: scale(1);
+  transition: all 0.3s ease-out;
+}
+
+.leaders div {
+  height: 420px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.leaders img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.leaders p {
+  font-family: "Cinzel";
+  text-align: center;
+  padding: 0.25em;
+  border: 1px solid var(--light-gray);
+  border-radius: 30px;
+  transition: all 0.3s ease-out;
+}
+
+.leaders:hover {
+  transform: scale(1.05);
+}
+
+.leaders:hover p {
+  background-color: var(--gold);
+  border: 1px solid transparent;
+}
+
+/*Milestone Section*/
+div.milestone-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 350px;
+  width: 100%;
+}
+
+div.milestone-container .milestone-group {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  gap: 20px;
+  width: fit-content;
+  padding: 1em 0.75em;
+  position: absolute;
+  opacity: 0;
+  transform: translateX(100vw);
+  transition: all 0.8s ease;
+  cursor: pointer;
+}
+
+div.milestone-container .milestone-group > div {
+  flex-shrink: 0;
+  width: 420px;
+  height: 330px;
+  border-radius: 30px;
+}
+
+div.milestone-container .milestone-group > div > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+div.milestone-container .milestone-group.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+div.milestone-container .milestone-group.exit {
+  opacity: 0;
+  transform: translateX(-100vw);
+  transition: all 0.8s ease;
+}
+
+div.milestone-container .milestone-group.hidden {
+  opacity: 0;
+  transform: translateX(100vw);
+  transition: none;
+}
+
+.milestone-indicators {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.milestone-indicators span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--light-gray);
+  margin: 0 5px;
+}
+
+.milestone-indicators span.active {
+  background-color: var(--gold);
+}
+
+/* Responsiveness for different screen sizes*/
+@media (max-width: 1385px) {
+  section.our-history {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  section.our-history div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1110px) {
+  section.banner {
+    height: 200px;
+  }
+
+  section.banner .overlay {
+    height: 200px;
+  }
+
+  section.banner h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  section.mission-vision {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  section.mission-vision div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .leaders {
+    width: 100%;
+  }
+
+  .leaders div {
+    height: 300px;
+  }
+
+  div.milestone-container div {
+    width: 400px;
+    height: 300px;
+  }
+}
